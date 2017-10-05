@@ -16,7 +16,6 @@ use falkirks\simplewarp\lang\TranslationManager;
 use falkirks\simplewarp\store\YAMLStore;
 use falkirks\simplewarp\utils\ChecksumVerify;
 use falkirks\simplewarp\utils\DebugDumpFactory;
-use falkirks\simplewarp\utils\SpoonDetector;
 use pocketmine\command\Command;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
@@ -71,9 +70,6 @@ class SimpleWarp extends PluginBase{
         if(file_exists($this->getDataFolder() . ".started") && $this->warpManager->getFlag() === WarpManager::MEMORY_TILL_CLOSE){
             $this->getLogger()->critical("SimpleWarp is starting in an inconsistent state. This is likely due to a server crash. You are using storage-mode=0 which means you could have lost data. Read more at http://bit.ly/0data");
         }
-
-        file_put_contents($this->getDataFolder() . ".started", "true");
-        SpoonDetector::printSpoon($this, 'spoon.txt');
 
         if(ChecksumVerify::isValid($this)){
             $this->getLogger()->info(TextFormat::LIGHT_PURPLE . "Your copy of SimpleWarp was verified." . TextFormat::RESET);
