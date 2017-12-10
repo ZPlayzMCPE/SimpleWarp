@@ -1,8 +1,8 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Falkirks/SimpleWarp
 branches:
-- master
+- patch-2
 projects:
-  SimpleWarp:
+  SimpleWarp-Latest:
     path: ""
     icon: meta/simplewarp.png
 ...
