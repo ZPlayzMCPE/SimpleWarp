@@ -32,7 +32,7 @@ class SpoonDetector{
     Have you read and understood the above (type 'yes' after the question mark)?";
 
     private static $thingsThatAreNotSpoons = [
-        'PocketMine-MP'
+        'Altay'
     ];
 
     public static function isThisSpoon() : bool {
