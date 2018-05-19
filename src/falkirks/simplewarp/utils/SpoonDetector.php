@@ -33,6 +33,7 @@ class SpoonDetector{
 
     private static $thingsThatAreNotSpoons = [
         'Altay'
+        'Pocketmine-MP'
     ];
 
     public static function isThisSpoon() : bool {
